@@ -17,3 +17,10 @@ window.addEventListener('scroll', function(){
         palm_tree_2.style.left =  75 + (scroll * 0.05) + '%';
     }
 })
+
+/* CONTENT LIST ON SMALLER SCREENS */
+const list = document.querySelector('#header .links');
+
+function toggleList(){
+    list.classList.toggle('active');
+}

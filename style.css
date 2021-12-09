@@ -71,18 +71,29 @@ section{
   background: rgb(194,245,181);
   background: linear-gradient(166deg, rgba(194,245,181,1) 0%, rgba(244,245,181,1) 100%);
 }
+
 #header .links{
   list-style-type: none;
   display: flex;
-}
-#header .links a:hover{
-  transition: 0.3s;
-  text-decoration: underline;
 }
 #header .links li::after{
   padding: 10px;
   content: "•";
 }
+#header .links a:hover{
+  transition: 0.3s;
+  text-decoration: underline;
+}
+
+#list-icon{
+  position: absolute;
+  visibility: hidden;
+  transition: right 0.4s;
+}
+
+
+
+
 
 /***** HOME *****/
 #home {
@@ -116,8 +127,7 @@ section{
   padding: 10px;
   border-radius: 15px;
   transition: 0.4s;
-  background-color: var(--background-color);
-
+  background-color: transparent;
 }
 #home .links li:hover{
   background-color: var(--pastel-yellow);
@@ -230,6 +240,60 @@ section{
 }
 
 #footer{
-  background: var(--pastel-green);
+  box-shadow: 0px -2px 25px #415380;
   background: linear-gradient(166deg, var(--pastel-green) 0%, var(--pastel-yellow) 100%);
+}
+#footer div{
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#footer a:hover{
+  text-decoration: underline;
+}
+
+
+@media (max-width: 700px){
+  /**** HEADER ****/
+  #header .links{
+    /*ul things*/
+    list-style-type: none;
+    padding-inline-start: 0px;
+    /*display*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  
+    /*position & background*/
+    background: linear-gradient(80deg, rgba(194,245,181,1) 0%, rgba(244,245,181,1) 100%);
+    border-radius: 3px;
+    height: 200px;
+    width: 200px;
+    position: fixed;
+    top: 70px;
+    /*transition*/
+    right: -200px;
+    transition: right 0.5s;
+  }
+  #header .links.active{
+    right:0;
+  }
+  #list-icon{
+    position: absolute;
+    visibility: visible;
+    top: 10px;
+    right: 75px;
+    width: 48px;
+  }
+
+
+  /*** FOOTER ***/
+  #footer div{
+    height: 175px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
 }
