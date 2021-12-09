@@ -1,0 +1,235 @@
+/*Font Raleway*/ @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --background-color: #FFFFFF;  
+  --font-color: #000000;
+
+  --pastel-yellow: #F4F5B5;
+  --pastel-green: #CFF5C1;
+  --green: #71F0AE;
+  --blue: #59CAD9;
+  --dark-blue: #5E7FD1;
+}
+*{
+  margin:0;
+}
+body{
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+
+  background: var(--background-color);
+  color: var(--font-color);
+
+  overflow-x: hidden;
+}
+h1{
+  font-size: 32px;
+}
+h2{
+  font-size: 28px;
+}
+h3{
+  font-size: 24px;
+}
+p, label{
+  font-size: 18px;
+}
+a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+a{
+  font-style: italic;
+}
+section{
+  margin: 0;
+  padding: 0;
+}
+.section-title {
+  margin-left: 30px;
+}
+
+/***** HEADER *****/
+#header{
+  position: fixed;
+  top: 0;
+  left:0;
+  z-index: 100;
+
+  max-width: 100%;
+  width: 95%;
+  height: 50px;
+  background-color: var(--pastel-green);
+  color: var(--font-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 10px 50px;
+
+  background: rgb(194,245,181);
+  background: linear-gradient(166deg, rgba(194,245,181,1) 0%, rgba(244,245,181,1) 100%);
+}
+#header .links{
+  list-style-type: none;
+  display: flex;
+}
+#header .links a:hover{
+  transition: 0.3s;
+  text-decoration: underline;
+}
+#header .links li::after{
+  padding: 10px;
+  content: "•";
+}
+
+/***** HOME *****/
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  margin-top: 50px; /*margin from header*/
+  height: 500px;
+
+  overflow: hidden;
+  position: relative;
+  z-index: 50;
+}
+.centered-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+
+  position: relative;
+  z-index: 50;
+}
+#home .links{
+  margin-top: 50px;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+#home .links li{
+  padding: 10px;
+  border-radius: 15px;
+  transition: 0.4s;
+  background-color: var(--background-color);
+
+}
+#home .links li:hover{
+  background-color: var(--pastel-yellow);
+  transition: 0.3s;
+}
+#home .home-images img{
+  position: absolute;
+  z-index: 30;
+}
+/*Home images*/
+.home-images img{
+  width: 150px;
+}
+/*Sky*/
+#cloud-1{
+  top: 130px;
+  left: 5%;
+  transform: scaleX(-1);
+}
+#cloud-2{
+  top: 80px;
+  left: 60%;
+}
+#cloud-3{
+  top: 120px;
+  left: 80%;
+}
+#sun{
+  top:50px;
+  left:25%;
+}
+/*Plants*/
+#palm-tree-1{
+  width: 250px;
+  top: 100px;
+  left: 10%;
+}
+#palm-tree-2{
+  width: 250px;
+  top: 100px;
+  left: 75%;
+  transform: scaleX(-1);
+}
+
+
+#transition-home{
+  position: relative;
+  height: 250px;
+  background-color: var(--blue);
+  background-image: url('./layered-waves-haikei.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0px -110px;
+}
+
+/****** GALLERY *******/
+#gallery{
+  margin-top: -50px;
+  background-color: var(--blue);
+  position: relative;
+  z-index: 50;
+}
+#gallery .carousel {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  
+  width: 100%;
+  padding: 50px;
+}
+.carousel-next, .carousel-prev{
+  width: 48px;
+}
+/*Container com as imagens*/
+#gallery .carousel-container {
+  display: flex;
+  width: 80%;
+  margin: 0 20px 0;
+  overflow-x: hidden;
+
+  /*Essa sombra deveria estar em cima das imagens, vejo isso depois*/
+  box-shadow: inset 20px 0px 10px var(--blue), inset -20px 0px 10px var(--blue);
+}
+#gallery .carousel-image img{
+  height: 300px;
+  width: 500px;
+  object-fit: cover;
+  margin-right: 50px;
+}
+
+
+#commodities {
+  background-color: var(--blue);
+}
+#commodities img {
+  width: 300px;
+}
+
+#rent {
+  background-color: var(--blue);
+}
+
+#newsletter {
+  background-color: var(--dark-blue);
+}
+
+#contact {
+  background-color: var(--dark-blue);
+}
+
+#footer{
+  background: var(--pastel-green);
+  background: linear-gradient(166deg, var(--pastel-green) 0%, var(--pastel-yellow) 100%);
+}
