@@ -24,3 +24,39 @@ const list = document.querySelector('#header .links');
 function toggleList(){
     list.classList.toggle('active');
 }
+
+/* CAROUSEL */
+const carousel = document.querySelector('#gallery .carousel-images');
+const nextArrow = document.querySelector('.carousel-next svg');
+const prevArrow = document.querySelector('.carousel-prev svg');
+var position;
+
+prevArrow.style.opacity = "0.5";
+
+function refleshArrows(){
+    position = parseInt(carousel.style.left);
+
+    if(position == 50) prevArrow.style.opacity = "0.5";
+    else if (position == -1950) nextArrow.style.opacity = "0.5";
+    else {
+        prevArrow.style.opacity = "1";
+        nextArrow.style.opacity = "1";
+    }
+}
+
+function carousel_prev(){
+    position = parseInt(carousel.style.left);
+    //se não estiver no mais do canto pode "andar"
+    if(position != 50) {
+        carousel.style.left = (position + 500) + "px";
+        refleshArrows();
+    }
+}
+function carousel_next(){
+    position = parseInt(carousel.style.left);
+    if(position != -1950){
+        carousel.style.left = (position - 500) + "px";
+        refleshArrows();
+    }
+}
+

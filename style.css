@@ -9,6 +9,7 @@
   --green: #71F0AE;
   --blue: #59CAD9;
   --dark-blue: #5E7FD1;
+  --darker-blue: #5E7FD1; /*#775ED1*/
 }
 *{
   margin:0;
@@ -46,7 +47,11 @@ section{
   padding: 0;
 }
 .section-title {
-  margin-left: 30px;
+  text-align: center;
+}
+.section-description {
+  text-align: center;
+  margin-top: 30px;
 }
 
 /***** HEADER *****/
@@ -90,9 +95,6 @@ section{
   visibility: hidden;
   transition: right 0.4s;
 }
-
-
-
 
 
 /***** HOME *****/
@@ -199,45 +201,61 @@ section{
   width: 100%;
   padding: 50px;
 }
-.carousel-next, .carousel-prev{
+#gallery .carousel svg{
   width: 48px;
 }
+.carousel-next, .carousel-prev{
+  height: 350px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 50;
+  background-color: var(--blue);
+}
+.carousel-next{
+  box-shadow: -20px 0px 20px 10px var(--blue); 
+}
+.carousel-prev{
+  box-shadow: 20px 0px 20px 10px var(--blue);
+}
+
 /*Container com as imagens*/
 #gallery .carousel-container {
   display: flex;
   width: 80%;
-  margin: 0 20px 0;
   overflow-x: hidden;
-
-  /*Essa sombra deveria estar em cima das imagens, vejo isso depois*/
-  box-shadow: inset 20px 0px 10px var(--blue), inset -20px 0px 10px var(--blue);
 }
-#gallery .carousel-image img{
+#gallery .carousel-images{
+  display: flex;
+  position: relative;
+  transition: left 0.5s;
+}
+#gallery .carousel-images img{
   height: 300px;
   width: 500px;
   object-fit: cover;
   margin-right: 50px;
-}
-
-
-#commodities {
-  background-color: var(--blue);
-}
-#commodities img {
-  width: 300px;
+  box-shadow: 1px 1px white, 15px 5px black;
+  user-select: none;
 }
 
 #rent {
-  background-color: var(--blue);
+  background-color: var(--dark-blue);
+
 }
 
 #newsletter {
-  background-color: var(--dark-blue);
+  background-color: var(--darker-blue);
 }
 
 #contact {
-  background-color: var(--dark-blue);
+  background-color: var(--darker-blue);
 }
+
+
+
+
+
 
 #footer{
   box-shadow: 0px -2px 25px #415380;
@@ -287,7 +305,6 @@ section{
     right: 75px;
     width: 48px;
   }
-
 
   /*** FOOTER ***/
   #footer div{
