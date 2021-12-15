@@ -26,8 +26,8 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#rent">Rent</a></li>
-                <li><a href="#newsletter">Newletter</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="#newsletter">Newletter</a></li>
             </ul>
             <div onclick="toggleList()">
                 <svg id="list-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 15h16v-2H4v2zm0 4h16v-2H4v2zm0-8h16V9H4v2zm0-6v2h16V5H4z"/></svg>
@@ -101,7 +101,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div >
+                        <div>
                             <img src="assets/gallery/7520701104_IMG_1476.jpg" alt="">
                             <div class="carousel-description">
                                 <p>
@@ -120,36 +120,68 @@
         </section>
 
         <section id="rent">
-            <h1 class="section-title">Rent</h1>
+            <div class="rent-body">
+                <div class="rent-images">
+                    <div class="main-image-container">
+                        <img id="main-image" src="./assets/commodities/IMG_2671.jpg" alt="">
+                    </div>
 
-            <input type="date">
+                    <div class="preview-wrapper">
 
-            <table>
-                <tr>
-                    <th></th>
-                </tr>
-                <tr>
-                    <td></td>
-                </tr>
-            </table>
+                            <img onclick="SwitchImage(0)" class="current-image" src="./assets/commodities/IMG_2671.jpg" alt="">
 
+                            <img onclick="SwitchImage(1)" src="assets/commodities/IMG_2744.jpg" alt="">
+
+                            <img onclick="SwitchImage(2)" src="assets/commodities/IMG_2755.jpg" alt="">
+
+                            <img onclick="SwitchImage(3)" src="assets/commodities/IMG_2760.jpg" alt="">
+
+                            <img onclick="SwitchImage(4)"src="assets/commodities/IMG_2847.jpg" alt="">
+
+                            <img onclick="SwitchImage(5)"src="assets/commodities/IMG_2867.jpg" alt="">
+
+                    </div>
+                </div>
+
+                <div class="rent-description">
+                    <h1 class="section-title">Rent</h1>
+                    <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto eos delectus illo! Nisi fuga neque error animi sint praesentium laborum reiciendis voluptatem. Aliquid, sint dignissimos laudantium blanditiis suscipit enim odio? <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus ut reiciendis incidunt non culpa similique quaerat, autem molestias recusandae temporibus omnis amet nihil velit saepe nemo quia dolores eligendi veritatis.</p>
+                    <input class="button" type="submit" name="" id="" value="Rent">
+                </div>
+            </div>
         </section>
-
-        <hr>
-
-        <section id="newsletter">
-            <h2 class="section-title">Newsletter</h2>
-
-        </section>
-
+        
         <section id="contact">
             <h2 class="section-title">Contact</h2>
-
+            <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto eos delectus illo! Nisi fuga neque error animi sint praesentium laborum reiciendis voluptatem. Aliquid, sint dignissimos laudantium blanditiis suscipit enim odio?</p>
+            
+            <p>
+                reach us at             <p> <a target="_blank" href="https://mail.google.com/mail/u/0/?fs=1&to=helenakurzgon@gmail.com&su=Beach%20Inn%20Website&tf=cm"> Email </a></p>
+            </p>
         </section>
+
     </main>
 
     <footer id="footer">
-        <div>
+        <div class="newsletter">
+            <div class="newsletter-title">
+                <h2>Newsletter</h2>
+            </div>
+            <div class="newsletter-description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto eos delectus illo!</p>
+            </div>
+            <div>
+                <form action="" class="newsletter-form">
+                    <label for="" class="newsletter-label"> Type your email here: </label>
+                    <input type="text" name="" id="email-input" placeholder="youremail@gmail.com">
+                    <div class="button-container">
+                        <input type="submit" value="Send" class="button">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-links">
             <p> <a target="_blank" href="https://twitter.com/helena_kurzzz"> Twitter</a></p>
             <p> <a target="_blank" href="https://github.com/aaneleh/"> Github </a></p>
             <p> <a target="_blank" href="https://vercel.com/aaneleh/"> Vercel </a></p>    

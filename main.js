@@ -43,7 +43,6 @@ function refleshArrows(){
         nextArrow.style.opacity = "1";
     }
 }
-
 function carousel_prev(){
     position = parseInt(carousel.style.left);
     //se não estiver no mais do canto pode "andar"
@@ -58,5 +57,20 @@ function carousel_next(){
         carousel.style.left = (position - 500) + "px";
         refleshArrows();
     }
+}
+
+/* RENT IMAGES */
+const mainImage = document.getElementById('main-image');
+const previewImages = document.querySelectorAll('.preview-wrapper img');
+let currentImage;
+function setMainImage(){
+    currentImage = document.querySelector('.current-image');
+    mainImage.setAttribute('src', currentImage.getAttribute('src'));
+}
+function SwitchImage (to) {
+    currentImage = document.querySelector('.current-image');
+    currentImage.classList.toggle('current-image');
+    previewImages[to].classList.toggle('current-image');
+    setMainImage();
 }
 
