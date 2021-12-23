@@ -7,9 +7,6 @@
     <!-- ICON -->
     <link rel="icon" type="image/svg+xml" href="beach_access_white_24dp.svg" />
 
-    <!-- SWIPER STYLE-->
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-
     <!-- STYLE -->
     <link rel="stylesheet" href="style.css">
 
@@ -55,14 +52,15 @@
                 <img id="palm-tree-2" src="./assets/home/palmTree-1.png" alt="Palmeira (English: palm tree)">
             </div>
         </section>
-
         <div id="transition-home"> </div>
 
         <section id="gallery">
             <h2 class="section-title">Galery</h2>
-            <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto eos delectus illo! Nisi fuga neque error animi sint praesentium laborum reiciendis voluptatem. Aliquid, sint dignissimos laudantium blanditiis suscipit enim odio?</p>
+            <p class="section-description">
+                Hover to see the images' descriptions
+            </p>
             <div class="carousel">
-                
+            
                 <div class="carousel-prev" onclick="carousel_prev()">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z"/></svg>
                 </div>
@@ -73,7 +71,7 @@
                             <img src="assets/gallery/7531142032_IMG_1346.jpg" alt="">
                             <div class="carousel-description">
                                 <p>
-
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                 </p>
                             </div>
                         </div>
@@ -81,7 +79,7 @@
                             <img src="assets/gallery/IMG_2583.jpg" alt="">
                             <div class="carousel-description">
                                 <p>
-                                    
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                 </p>
                             </div>
                         </div>
@@ -89,7 +87,7 @@
                             <img src="assets/gallery/IMG_2721.jpg" alt="">
                             <div class="carousel-description">
                                 <p>
-                                    
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                 </p>
                             </div>
                         </div>
@@ -97,7 +95,7 @@
                             <img src="assets/gallery/0b6d7e1d-8762-436e-babd-7241fef5a7c9.jpg" alt="">
                             <div class="carousel-description">
                                 <p>
-                                    
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                 </p>
                             </div>
                         </div>
@@ -105,7 +103,7 @@
                             <img src="assets/gallery/7520701104_IMG_1476.jpg" alt="">
                             <div class="carousel-description">
                                 <p>
-                                    
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                 </p>
                             </div>
                         </div>
@@ -115,31 +113,32 @@
                 <div class="carousel-next" onclick="carousel_next()">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
                 </div>
-
             </div>
         </section>
 
         <section id="rent">
+            <div class="transition-gallery">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
+            </div>
+
             <div class="rent-body">
                 <div class="rent-images">
                     <div class="main-image-container">
-                        <img id="main-image" src="./assets/commodities/IMG_2671.jpg" alt="">
+                        <img id="main-image" src="./assets/commodities/IMG_2671.jpg" alt="Restaurante">
+                        <p id="main-image-description">
+                            Restaurante
+                        </p>
                     </div>
 
                     <div class="preview-wrapper">
-
-                            <img onclick="SwitchImage(0)" class="current-image" src="./assets/commodities/IMG_2671.jpg" alt="">
-
-                            <img onclick="SwitchImage(1)" src="assets/commodities/IMG_2744.jpg" alt="">
-
-                            <img onclick="SwitchImage(2)" src="assets/commodities/IMG_2755.jpg" alt="">
-
-                            <img onclick="SwitchImage(3)" src="assets/commodities/IMG_2760.jpg" alt="">
-
-                            <img onclick="SwitchImage(4)"src="assets/commodities/IMG_2847.jpg" alt="">
-
-                            <img onclick="SwitchImage(5)"src="assets/commodities/IMG_2867.jpg" alt="">
-
+                            <img onclick="SwitchImage(0)" class="current-image" src="./assets/commodities/IMG_2671.jpg" alt="Restaurante">
+                            <img onclick="SwitchImage(1)" src="assets/commodities/IMG_2744.jpg" alt="Mergulho com Peixes">
+                            <img onclick="SwitchImage(2)" src="assets/commodities/IMG_2755.jpg" alt="Disponibilidade de Talheres">
+                            <img onclick="SwitchImage(3)" src="assets/commodities/IMG_2760.jpg" alt="Ótima vista">
+                            <img onclick="SwitchImage(4)"src="assets/commodities/IMG_2847.jpg" alt="Caiaques">
+                            <img onclick="SwitchImage(5)"src="assets/commodities/IMG_2867.jpg" alt="Café da manhã">
                     </div>
                 </div>
 
@@ -149,17 +148,39 @@
                     <input class="button" type="submit" name="" id="" value="Rent">
                 </div>
             </div>
-        </section>
-        
-        <section id="contact">
-            <h2 class="section-title">Contact</h2>
-            <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto eos delectus illo! Nisi fuga neque error animi sint praesentium laborum reiciendis voluptatem. Aliquid, sint dignissimos laudantium blanditiis suscipit enim odio?</p>
-            
-            <p>
-                reach us at             <p> <a target="_blank" href="https://mail.google.com/mail/u/0/?fs=1&to=helenakurzgon@gmail.com&su=Beach%20Inn%20Website&tf=cm"> Email </a></p>
-            </p>
+
+
         </section>
 
+        <section id="contact">
+            <div class="transition-rent">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
+            </div>
+
+            <div class="contact-body">
+                <h2 class="section-title">Contact</h2>
+                <p class="section-description">
+                    If you have any questions please email us <a target="_blank" href="https://mail.google.com/mail/u/0/?fs=1&to=helenakurzgon@gmail.com&su=Beach%20Inn%20Website&tf=cm"> here </a>
+                </p>
+
+                <div class="me-info">
+                    <div class="me-description">
+                        <p>This website was design and coded by me! <br> You can see more of my projects on the links below </p>
+                        <div class="me-links">
+                            <p> <a target="_blank" href="https://twitter.com/helena_kurzzz"> Twitter</a></p>
+                            <p> <a target="_blank" href="https://github.com/aaneleh/"> Github </a></p>
+                            <p> <a target="_blank" href="https://vercel.com/aaneleh/"> Vercel </a></p>
+                        </div>
+                    </div>
+                    <div class="me-image">
+                        <img src="https://avatars.githubusercontent.com/u/60665976?s=400&u=7fb0cf78b0c45b30feed8c266ca34d339a6a1fe8&v=4" alt="my github profile photo">
+                    </div>
+                </div>
+                
+            </div>
+        </section>
     </main>
 
     <footer id="footer">
@@ -168,16 +189,18 @@
                 <h2>Newsletter</h2>
             </div>
             <div class="newsletter-description">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto eos delectus illo!</p>
+                <p>And please add your email to our newsletter to receive information about descounts and new stuff!</p>
             </div>
-            <div>
-                <form action="" class="newsletter-form">
-                    <label for="" class="newsletter-label"> Type your email here: </label>
-                    <input type="text" name="" id="email-input" placeholder="youremail@gmail.com">
+            <div>            
+                    <form class="newsletter-form" id="newsletter-form" >
+                    <label for="email" class="newsletter-label"> Type your email here: </label>
+                    <input type="text" name="email" id="email-input" placeholder="youremail@gmail.com" value="youremail@gmail.com">
                     <div class="button-container">
-                        <input type="submit" value="Send" class="button">
+                        <button type="submit" id="newsletter-button" class="button" value="Send">Send</button>
                     </div>
                 </form>
+
+                <script src="./newsletter.js"> </script>
             </div>
         </div>
         <hr>
@@ -190,6 +213,6 @@
         </div>
     </footer>
     
-    <script src="/main.js"></script>
+    <script src="./main.js"></script>
 </body>
 </html>

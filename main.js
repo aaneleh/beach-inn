@@ -61,11 +61,19 @@ function carousel_next(){
 
 /* RENT IMAGES */
 const mainImage = document.getElementById('main-image');
+const mainImageDescription = document.getElementById('main-image-description');
+
 const previewImages = document.querySelectorAll('.preview-wrapper img');
-let currentImage;
+let currentImage = document.querySelector('.current-image')
+
+function setDescription(){
+    mainImageDescription.innerHTML = mainImage.getAttribute('alt');
+}
 function setMainImage(){
     currentImage = document.querySelector('.current-image');
     mainImage.setAttribute('src', currentImage.getAttribute('src'));
+    mainImage.setAttribute('alt', currentImage.getAttribute('alt'));
+    setDescription();
 }
 function SwitchImage (to) {
     currentImage = document.querySelector('.current-image');
