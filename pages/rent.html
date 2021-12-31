@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ICON -->
+    <link rel="icon" type="image/svg+xml" href="beach_access_white_24dp.svg" />
+
+    <!-- STYLE -->
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="rent-style.css">
+
+    <title>Rent</title>
+</head>
+<body>
+    <header id="header">
+        <div class="logo-container">
+            <h2 class="logo"> Logo </h2>
+        </div>
+        <div class="links-container" >
+            <ul>
+                <li class="go-back">
+                    <svg style="margin-right: 1em" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                    <a href="/index.html">Go back to home page</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    
+    <main>
+        <section>
+
+            <div>
+                <h1 class="section-title">Rent</h1>
+                <h2>Please fill the questionnaire below</h2>
+            </div>
+            
+            <form id="rent-form">
+
+                <div id="duration-container">
+                    <label for="duration">How long do you want to stay?</label>
+                    <input type="number" id="duration" nome="duration">
+                    <input type="button" class="button" onclick="validateDuration()" value="Next">
+                </div>
+                
+                <div id="date-container" class="not-visible">
+                    <label for="date">When do you arrive?</label>
+                    <input type="date" id="date" nome="date">
+                    <input type="button" class="button" onclick="validateDate()" value="Next">
+                    <script>
+                        /* DURATION */
+                        /* Set min date */
+                        var currentDate = new Date();
+                        var now; 
+                        now = currentDate.getFullYear() + "-" + currentDate.getMonth() + "-" + currentDate.getDate();
+                        const dateInput = document.getElementById('date');
+                        dateInput.min = now;
+                    </script>
+                </div>
+                
+                <div id="people-container" class="not-visible">
+                    <label for="people">How many people will be staying in?</label>
+                    <input type="number" id="people" nome="people">
+                    <input class="button" type="button" onclick="validatePeople()" value="Done">
+                </div>
+                
+<!--  colocar o background como um cinza e um :before como esse verde, dai a cada next esse :before se move -->                
+                <div id="progress-bar" style=" width: 100%; background-color: var(--pastel-green); height:1em"> </div>
+                
+            </form>
+            
+            
+            <div id="price-container" class="not-visible">
+                Final Price:
+            </div>
+
+            <script src="/js/rent.js"></script>
+
+        </section>
+    </main>
+</body>
+</html>

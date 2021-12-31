@@ -94,6 +94,10 @@ section{
   padding: 10px;
   content: "•";
 }
+#header .links li:last-child:after{
+  padding: 10px;
+  content: "";
+}
 #header .links a:hover{
   transition: 0.3s;
   text-decoration: underline;
@@ -105,6 +109,16 @@ section{
   transition: right 0.4s;
 }
 
+#header .go-back {
+  margin-right: 2em;
+  list-style-type: none;
+  display: flex;
+  align-items: center; /* this is for the svg on the rent page */
+}
+
+main{
+  margin-top: 75px; /*margin from header*/
+}
 
 /***** HOME *****/
 #home {
@@ -112,7 +126,6 @@ section{
   flex-direction: column;
   justify-content: center;
   
-  margin-top: 50px; /*margin from header*/
   height: 500px;
 
   overflow: hidden;
@@ -188,7 +201,7 @@ section{
   position: relative;
   height: 250px;
   background-color: var(--blue);
-  background-image: url('./layered-waves-haikei.svg');
+  background-image: url('/svgs/layered-waves-haikei.svg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0px -110px;
@@ -291,6 +304,17 @@ section{
   fill: var(--gallery-bg);
 }
 
+
+
+/*.BUTTON*/
+.button {
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: var(--pastel-yellow);
+  border: 1px solid var(--pastel-yellow);
+  border-radius: 10px;
+}
+
 /*** RENT ***/
 #rent {
   background-color: var(--rent-bg);
@@ -309,19 +333,16 @@ section{
   align-items: center;
 }
 #rent .rent-description .button{
-  cursor: pointer;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 
   width: 100px;
   height: 40px;
-  transition: width 0.2s, height 0.1s, margin 0.1s, border-radius 0.1s;
+  transition: width 0.2s, height 0.1s, margin 0.1s, border-radius 0.1s, font-weight 0.1s;
   
   margin-top: 100px;
   margin-bottom: 10px;
-
-  padding: 10px 20px;
-  background-color: var(--pastel-yellow);
-  border: 1px solid var(--pastel-yellow);
-  border-radius: 10px;
 }
 #rent .rent-description .button:hover{
   width: 110px;
@@ -329,6 +350,7 @@ section{
   margin-top: 95px;
   margin-bottom: 5px;
   border-radius: 15px;
+  font-weight: bold;
 }
 /*LEFT SIDE*/
 .rent-images {
