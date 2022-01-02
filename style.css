@@ -63,6 +63,9 @@ section{
 }
 
 /***** HEADER *****/
+.logo a {
+  font-style: normal;
+}
 #header{
   position: fixed;
   top: 0;
