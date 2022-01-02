@@ -204,7 +204,7 @@ main{
   position: relative;
   height: 250px;
   background-color: var(--blue);
-  background-image: url('svgs/beach_access_white_24dp.svg');
+  background-image: url('svgs/layered-waves-haikei.svg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0px -110px;
