@@ -58,6 +58,7 @@ You can acess the website directely on [this link](https://aaneleh.github.io/bea
 Or you can see a video I posted on my twitter   [here](https://twitter.com/helena_kurzzz/status/1477839246182473734)
   
 Or you can also see an image of the whole website below  
+  
 ![](/images/demo-image.png)
 
 ## Tech
