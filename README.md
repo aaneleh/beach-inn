@@ -21,13 +21,10 @@ Também há a página com o formulário para alugar o quarto. Nele há campos pa
 ## Demonstração
 
 Você pode acessar o site diretamente [neste link](https://aaneleh.github.io/beach-inn/)  
-_You can acess the website directely on [this link](https://aaneleh.github.io/beach-inn/)_  
   
 Ou você pode ver o vídeo que postei em meu twitter [aqui](https://twitter.com/helena_kurzzz/status/1477839246182473734)  
-_Or you can see a video I posted on my twitter [here](https://twitter.com/helena_kurzzz/status/1477839246182473734)_    
   
 Ou ainda, abaixo está uma imagem (com pouca qualidade) do site inteiro  
-_Or you can also see an image of the whole website below_  
   
 ![](/images/demo-image.png)
 
